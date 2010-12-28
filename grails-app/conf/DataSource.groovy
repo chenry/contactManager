@@ -17,6 +17,15 @@ environments {
             url = "jdbc:hsqldb:mem:devDB"
         }
     }
+    mysqltest {
+        dataSource {
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+	    driverClassName = "com.mysql.jdbc.Driver"
+            url = "jdbc:mysql://localhost:3306/contactmgrdb"
+	    username = "contactmgr_appl"
+	    password = "contactmgr_appl"
+        }
+    }
     test {
         dataSource {
             dbCreate = "update"

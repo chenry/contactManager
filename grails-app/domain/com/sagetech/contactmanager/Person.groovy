@@ -13,6 +13,14 @@ class Person {
 	description(nullable:true, blank:false, maxSize:800)
     }
 
+    static mapping = {
+	table 'people'
+	firstName column:'First_Name'
+	lastName column:'Last_Name'
+
+	skills joinTable:'person_skill_associations'
+    }
+
     String getFullName() {
 	toString()
     }

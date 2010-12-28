@@ -8,6 +8,9 @@ class BootStrap {
 	    development {
 		populateDevData();
 	    }
+	    mysqltest {
+		populateDevData();
+	    }
 	}
     }
 
