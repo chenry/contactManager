@@ -5,6 +5,6 @@ class Skill {
     String description
     static constraints = {
 	name(blank:false, unique:true)
-	description(maxSize:800)
+	description(nullable:true, maxSize:800)
     }
 }

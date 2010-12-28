@@ -7,12 +7,8 @@ class PersonTests extends GrailsUnitTestCase {
     def m = [firstName:"Carlus", lastName:"Henry", description:"Awesome Dude"]
     protected void setUp() {
         super.setUp()
-	mockForConstraintsTests(Person)
+	mockDomain(Person)
 	p = new Person(m)
-    }
-
-    protected void tearDown() {
-        super.tearDown()
     }
 
     void testPersonConstructorWithMap() {
@@ -44,9 +40,6 @@ class PersonTests extends GrailsUnitTestCase {
 	assertFalse "this should not validate since we are missing the first name", pTest.validate()
 	assertTrue "there should be errors present", pTest.hasErrors()
 	assertNotNull pTest.errors.getFieldError('firstName')
-
-	//println "Errors:"
-	//println pTest.errors ?: "no errors found"
 
 	pTest.firstName = 'Carlus'
 
