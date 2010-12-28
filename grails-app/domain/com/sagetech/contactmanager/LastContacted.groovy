@@ -7,6 +7,10 @@ class LastContacted {
     static belongsTo = [person:Person]
     static constraints = {
 	dateOfContact(blank:false)
-	description(blank:false)
+	description(blank:false, maxSize:500)
+    }
+
+    String toString() {
+	dateOfContact
     }
 }

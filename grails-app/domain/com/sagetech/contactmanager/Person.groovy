@@ -5,7 +5,7 @@ class Person {
     String lastName
     String description
     transient String fullName
-    static hasMany = [ lastContacted:LastContacted ]
+    static hasMany = [ lastContacted:LastContacted, skills:Skill ]
     static constraints = {
 	firstName(blank:false, maxSize:80)
 	lastName(blank:false, maxSize:80)
@@ -14,6 +14,10 @@ class Person {
     }
 
     String getFullName() {
+	toString()
+    }
+
+    String toString() {
 	"$firstName $lastName"
     }
 }

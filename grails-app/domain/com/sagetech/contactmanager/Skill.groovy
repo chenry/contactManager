@@ -7,4 +7,8 @@ class Skill {
 	name(blank:false, unique:true)
 	description(nullable:true, maxSize:800)
     }
+
+    String toString() {
+	name	
+    }
 }
