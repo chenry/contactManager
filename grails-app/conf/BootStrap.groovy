@@ -29,6 +29,7 @@ class BootStrap {
 	def atheesh = new Person(firstName:"Atheesh", lastName:"Sanka", description:"Fellow Consultant at GFS for the past 4 years")
 			.addToSkills(java)
 			.save(flush:true)
+
 	def ja = new Person(firstName:"Jeremy", lastName:"Anderson", description:"Pillar Consultant at GFS, wrote Flex on Java for Manning")
 			.addToSkills(java)
 			.addToSkills(ruby)
