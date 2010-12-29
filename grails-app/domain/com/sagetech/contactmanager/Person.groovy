@@ -17,8 +17,6 @@ class Person {
 	table 'people'
 	firstName column:'First_Name'
 	lastName column:'Last_Name'
-
-	skills joinTable:'person_skill_associations'
     }
 
     String getFullName() {

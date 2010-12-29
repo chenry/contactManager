@@ -7,6 +7,10 @@ class UrlMappings {
 			}
 		}
 
+		"/service/$controller"{
+		    action = [GET:'serviceShow', PUT:'serviceSave', POST:'serviceUpdate', DELETE:'serviceDelete']
+		}
+
 		"/"(view:"/index")
 		"500"(view:'/error')
 	}
