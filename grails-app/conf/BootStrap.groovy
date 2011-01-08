@@ -1,5 +1,4 @@
-import com.sagetech.contactmanager.Person
-import com.sagetech.contactmanager.Skill
+import com.sagetech.contactmanager.*
 
 class BootStrap {
 
@@ -8,7 +7,7 @@ class BootStrap {
 	    development {
 		populateDevData();
 	    }
-	    mysqltest {
+	    test {
 		populateDevData();
 	    }
 	}
@@ -22,6 +21,14 @@ class BootStrap {
 	def php = new Skill(name:"PHP", description:"Programming Language")
 	def groovy = new Skill(name:"Groovy", description:"Programming Language")
 	def grails = new Skill(name:"Grails", description:"Web framework for Groovy")
+	def cplusplus = new Skill(name:"C++", description:"Programming Language").save(flush:true)
+	def c = new Skill(name:"C", description:"Programming Language").save(flush:true)
+
+	def gfs = new Company(name:"Gordon Food Service").save(flush:true)
+	def johnsonControls = new Company(name:"Johnson Controls").save(flush:true)
+	def gvsu = new Company(name:"Grand Valley University").save(flush:true)
+	def mutuallyHuman = new Company(name:"Mutually Human").save(flush:true)
+	def pillar = new Company(name:"Pillar").save(flush:true)
 
 	def me = new Person(firstName:"Carlus", lastName:"Henry", description:"Me.")	
 			.addToSkills(java)

@@ -5,7 +5,9 @@ class Person {
     String lastName
     String description
     transient String fullName
-    static hasMany = [ lastContacted:LastContacted, skills:Skill ]
+    static hasMany = [ lastContacted:LastContacted, skills:Skill, employments:Employment ]
+    static mappedBy = [employments:"employee"]
+
     static constraints = {
 	firstName(blank:false, maxSize:80)
 	lastName(blank:false, maxSize:80)

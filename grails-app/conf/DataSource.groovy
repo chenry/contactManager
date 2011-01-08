@@ -17,25 +17,22 @@ environments {
             url = "jdbc:hsqldb:mem:devDB"
         }
     }
-    mysqltest {
+    test {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            dbCreate = "update" // one of 'create', 'create-drop','update'
 	    driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://localhost:3306/contactmgrdb"
+            url = "jdbc:mysql://localhost:3306/contactmgrtest"
 	    username = "contactmgr_appl"
 	    password = "contactmgr_appl"
         }
     }
-    test {
-        dataSource {
-            dbCreate = "update"
-            url = "jdbc:hsqldb:file:testDb;shutdown=true"
-        }
-    }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+            dbCreate = "update" // one of 'create', 'create-drop','update'
+	    driverClassName = "com.mysql.jdbc.Driver"
+            url = "jdbc:mysql://localhost:3306/contactmgr"
+	    username = "contactmgr_appl"
+	    password = "contactmgr_appl"
         }
     }
 }
