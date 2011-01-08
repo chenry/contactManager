@@ -4,6 +4,8 @@ class Person {
     String firstName
     String lastName
     String description
+    String phoneNumber
+    String emailAddress
     transient String fullName
     static hasMany = [ lastContacted:LastContacted, skills:Skill, employments:Employment ]
     static mappedBy = [employments:"employee"]
