@@ -15,6 +15,8 @@ class Person {
 	lastName(blank:false, maxSize:80)
 	fullName(unique:true)
 	description(nullable:true, blank:false, maxSize:800)
+	phoneNumber(blank:true, nullable:true)
+	emailAddress(blank:true, nullable:true)
     }
 
     static mapping = {
